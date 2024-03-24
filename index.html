@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8aff1d1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            border: none;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            display: inline-block;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 15px 32px;
+            font-size: 16px;
+            animation: pulse 2s infinite;
+        }
+
+        .button-gray {
+            background-color: rgba(128, 128, 128, 0.363);
+            border: none;
+        }
+
+        .button-gray:hover {
+            background-color: rgb(115, 255, 0);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>comensar la mineria en la nube de bitcoin gratis</h2>
+
+    <button class="button button-gray" onclick="startMining()">Minar</button>
+
+    <p id="funds">btc: </p>
+</div>
+
+<script>
+    var funds = 0;
+    var miningInterval;
+
+    function startMining() {
+        document.querySelector('.button').style.backgroundColor = 'yellow';
+        if (miningInterval) {
+            clearInterval(miningInterval);
+        }
+        miningInterval = setInterval(function() {
+                        funds += 0.000000001;
+            document.getElementById('funds').innerHTML = "btc: " + funds;
+        }, 1000); // 
+    }
+</script>
+
+</body>
+</html>
