@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} ^example.com [NC]	
+#RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+
+RewriteRule ^registro(.*)?$ registro.php
+RewriteRule ^ajax(.*)?$ ajax.php
+RewriteRule ^logout(.*)?$ logout.php
+RewriteRule ^dashboard(.*)?$ dashboard.php
+RewriteRule ^referal/(.*)?$ referal.php?permalink=$1
+RewriteRule ^configuration(.*)?$ configuration.php
+RewriteRule ^mynotifications(.*)?$ notifications.php
+RewriteRule ^laststep(.*)?$ laststep.php
+RewriteRule ^recuperar-cuenta(.*)?$ recovery.php
+RewriteRule ^profile(.*)?$ profile.php
+
+</IfModule>

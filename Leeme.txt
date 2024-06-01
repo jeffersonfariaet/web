@@ -1,0 +1,11 @@
+Montas la base de datos en tu servidor
+para poder vincular la base con el sistema
+es necesario editar el archivo "config.php"
+que esta en la carpeta "administrador/includes/"
+
+espero que te sea de utilidad porque este sistema
+ya no cuenta con soporte.
+
+Saludos!
+
+JHCodes
